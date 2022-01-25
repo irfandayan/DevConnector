@@ -10,6 +10,7 @@ const Alert = ({ alerts }) =>
       {alert.msg}
     </div>
   ));
+
 Alert.propTypes = {
   alerts: PropTypes.array.isRequired,
 };
@@ -18,4 +19,4 @@ const mapStateToProps = (state) => ({
   alerts: state.alert,
 });
 
-export default connect()(Alert);
+export default connect(mapStateToProps)(Alert);
